@@ -41,8 +41,9 @@
         </dependency>
 
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
+            <!-- Spring Boot 2.7.8+ 起 MySQL 驱动改用新坐标,版本由 BOM 管理 -->
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
             <scope>runtime</scope>
         </dependency>
 
