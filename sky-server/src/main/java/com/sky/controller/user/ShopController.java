@@ -23,6 +23,10 @@ public class ShopController {
     @ApiOperation("获取店铺营业状态")
     public Result<Integer> getStatus(){
         Integer status = (Integer) redisTemplate.opsForValue().get(KEY);
+        //key 不存在时视为打烊，避免 Integer 拆箱空指针
+        if (status == null) {
+            status = 0;
+        }
         log.info("获取店铺的营业状态为:{}",status == 1 ? "营业中" : "打烊中");
         return Result.success(status);
     }
