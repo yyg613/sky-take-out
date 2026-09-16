@@ -14,5 +14,3 @@ sky:
     access-key-id: ${ALIOSS_ACCESS_KEY_ID}
     access-key-secret: ${ALIOSS_ACCESS_KEY_SECRET}
     bucket-name: sky-hytrix
-
-  
